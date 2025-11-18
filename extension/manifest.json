@@ -13,7 +13,7 @@
   "background": {
     "service_worker": "dist/background.js",
     "type": "module"
-  ],
+  },
   "content_scripts": [
     {
       "matches": [
@@ -41,4 +41,3 @@
     "default_title": "M365 AiTM Guard"
   }
 }
-
