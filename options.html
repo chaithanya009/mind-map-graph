@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>AitM Toolkit Detector – Options</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>AitM Phishing Toolkit Detector</h1>
+        <p class="subtitle">
+          Configure how the extension responds to Evilginx-style adversary-in-the-middle phishing toolkits.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>Detection Mode</h2>
+        <p class="section-desc">
+          Choose how the extension reacts when it detects AitM toolkit behavior.
+        </p>
+        <div class="field-group">
+          <label class="radio-row">
+            <input type="radio" name="mode" value="monitor" />
+            <span>
+              <strong>Monitor</strong> – silently log detections for analysis, do not notify the user.
+            </span>
+          </label>
+          <label class="radio-row">
+            <input type="radio" name="mode" value="warn" />
+            <span>
+              <strong>Warn</strong> – show an in-page warning overlay and let the user choose whether to continue.
+            </span>
+          </label>
+          <label class="radio-row">
+            <input type="radio" name="mode" value="block" />
+            <span>
+              <strong>Block</strong> – block access by default and redirect the user away from the page.
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Identity Provider Domains</h2>
+        <p class="section-desc">
+          These domains are treated as \"trusted IdPs\". The detector looks for them being proxied or embedded from untrusted hosts.
+        </p>
+        <label class="field-label" for="idpDomains">
+          Domains (one per line)
+        </label>
+        <textarea id="idpDomains" rows="6" spellcheck="false"></textarea>
+      </section>
+
+      <section class="card">
+        <h2>Logging & Webhook</h2>
+        <p class="section-desc">
+          Detection events are always stored locally. Optionally send them to a webhook for SIEM/SOAR or other tooling.
+        </p>
+        <label class="field-label" for="webhookUrl">Webhook URL (optional)</label>
+        <input
+          id="webhookUrl"
+          type="url"
+          placeholder="https://your-siem-or-webhook-endpoint.example.com/aitm-events"
+        />
+
+        <label class="checkbox-row">
+          <input type="checkbox" id="debug" />
+          <span>Enable debug logging in the browser console</span>
+        </label>
+      </section>
+
+      <footer class="actions">
+        <button id="saveBtn" class="primary">Save settings</button>
+        <span id="status" class="status" aria-live="polite"></span>
+      </footer>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>
+
+
