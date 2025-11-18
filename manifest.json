@@ -6,7 +6,6 @@
   "permissions": [
     "storage",
     "webRequest",
-    "webRequestBlocking",
     "declarativeNetRequest",
     "scripting",
     "webNavigation"
@@ -43,4 +42,3 @@
     }
   ]
 }
-
