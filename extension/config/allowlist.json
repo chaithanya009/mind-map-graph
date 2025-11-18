@@ -1,0 +1,15 @@
+[
+  "login.microsoftonline.com",
+  "*.microsoftonline.com",
+  "login.live.com",
+  "*.office.com",
+  "*.microsoft.com",
+  "*.aadcdn.microsoftonline-p.com",
+  "*.msauth.net",
+  "*.msauthimages.net",
+  "login.microsoftonline.us",
+  "login.microsoftonline.de",
+  "login.partner.microsoftonline.cn"
+]
+
+

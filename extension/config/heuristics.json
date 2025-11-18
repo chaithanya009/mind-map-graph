@@ -1,0 +1,17 @@
+{
+  "minIndicatorsToBlock": 2,
+  "requireBrandMismatch": true,
+  "dom": {
+    "enableM365LoginDetection": true
+  },
+  "url": {
+    "enableOidcPattern": true
+  },
+  "headers": {
+    "enableAadCookieCheck": true,
+    "enableMsHeadersCheck": true,
+    "enableCspMsRefsCheck": true
+  }
+}
+
+

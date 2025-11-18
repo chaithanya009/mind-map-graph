@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Access blocked – M365 AiTM protection</title>
+    <link rel="stylesheet" href="block.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title">Access blocked</div>
+        <div class="subtitle">This page appears to be a phishing proxy of Microsoft 365 (AiTM).</div>
+      </div>
+      <div class="card">
+        <div class="row"><span class="label">Suspicious domain:</span> <span id="domain"></span></div>
+        <div class="row"><span class="label">Reasons detected:</span></div>
+        <ul id="reasons"></ul>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="https://www.office.com/" target="_blank" rel="noopener noreferrer">Open Microsoft 365 safely</a>
+        <a class="btn" href="https://login.microsoftonline.com/" target="_blank" rel="noopener noreferrer">Sign in at login.microsoftonline.com</a>
+      </div>
+      <div class="footer">
+        <div class="note">If you believe this is a mistake, contact your administrator.</div>
+      </div>
+    </div>
+    <script src="block.js"></script>
+  </body>
+  </html>
+
+

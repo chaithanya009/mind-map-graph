@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "M365 AiTM Blocker",
+  "version": "0.1.0",
+  "description": "Blocks Microsoft 365 adversary-in-the-middle phishing toolkits (Evilginx-style) using generic indicators.",
+  "minimum_chrome_version": "109",
+  "background": {
+    "service_worker": "background/service_worker.js",
+    "type": "module"
+  },
+  "permissions": [
+    "webRequest",
+    "webNavigation",
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content/content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_title": "M365 AiTM Blocker"
+  }
+}
+
+
