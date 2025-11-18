@@ -1,0 +1,20 @@
+{
+  "name": "yig6c",
+  "version": "1.0.0",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "Chrome/Edge MV3 extension that blocks AiTM phishing toolkits targeting Microsoft 365.",
+  "devDependencies": {
+    "@types/chrome": "^0.1.30",
+    "typescript": "^5.9.3"
+  }
+}

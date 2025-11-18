@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "M365 AiTM Guard",
+  "description": "Detects and blocks adversary-in-the-middle phishing toolkits targeting Microsoft 365 login flows.",
+  "version": "0.1.0",
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "declarativeNetRequest",
+    "scripting",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "dist/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "js": [
+        "dist/content/detector.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_title": "AiTM Guard"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "static/block.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
+
