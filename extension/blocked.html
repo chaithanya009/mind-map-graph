@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Access blocked</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="blocked.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Suspicious Microsoft 365 login blocked</h1>
+        <p class="summary">
+          We blocked this page because it resembles an adversary-in-the-middle
+          phishing toolkit attempting to relay the Microsoft 365 sign-in flow.
+        </p>
+      </header>
+      <section class="details">
+        <h2>What we saw</h2>
+        <dl class="metrics">
+          <div>
+            <dt>Detected risk score</dt>
+            <dd id="score"></dd>
+          </div>
+          <div>
+            <dt>Threshold</dt>
+            <dd id="threshold"></dd>
+          </div>
+          <div>
+            <dt>Untrusted host</dt>
+            <dd id="hostname"></dd>
+          </div>
+        </dl>
+        <h3>Signals</h3>
+        <ul id="signal-list"></ul>
+      </section>
+      <footer>
+        <p>
+          If you initiated this request, contact your security team or helpdesk
+          to report the blocked URL.
+        </p>
+        <button id="close-tab">Close tab</button>
+      </footer>
+    </main>
+    <script type="module" src="dist/blocked.js"></script>
+  </body>
+</html>
+
